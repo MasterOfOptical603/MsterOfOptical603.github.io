@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>603EnrollmentManual</title>
+    <link>/</link>
+    <description>Recent content on 603EnrollmentManual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/docs/%E5%89%8D%E8%A8%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/%E5%89%8D%E8%A8%80/</guid>
+      <description> 前言 # “If I have seen further it is by standing on the shoulders of giants.” -Issac Newton.&#xA;这是一本涉及算法, 光通信的自学指南。以及对603组内资源的部分汇总。&#xA;对于我个人而言，这是一份献给每一个进入603的师弟师妹们的礼物。如果这本手册能帮助你更快的适应新环境，避免自学路上的许多弯路， 或者仅仅是更快的获取到组内的资源，都是对我极大的鼓励和慰藉。&#xA;本书目前包括以下部分：&#xA;必学工具:翻墙，Git，conda，docker等等 各种环境配置 代码资源汇总 相关书籍推荐 自学课程汇总 实验手册 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>/docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/scoop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/scoop/</guid>
+      <description>Scoop # 为什么使用 Scoop # 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。&#xA;例如安装 python 和 nodejs 只需要执行：&#xA;scoop install python scoop install nodejs 安装 Scoop # Scoop 需要 Windows PowerShell 5.1 或者 PowerShell 作为运行环境，如果你使用的是 Windows 10 及以上版本，Windows PowerShell 是内置在系统中的。而 Windows 7 内置的 Windows PowerShell 版本过于陈旧，你需要手动安装新版本的 PowerShell。&#xA;由于发现很多同学在设置 Windows 用户时使用了中文用户名，导致了用户目录也变成了中文名。如果按照 Scoop 的默认方式将软件安装到用户目录下，可能会造成部分软件执行错误。所以这里推荐安装到自定义目录，如果需要其他安装方式请参考： ScoopInstaller/Install&#xA;# 设置 PowerShell 执行策略 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 下载安装脚本 irm get.scoop.sh -outfile &amp;#39;install.ps1&amp;#39; # 执行安装, --ScoopDir 参数指定 Scoop 安装路径 .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>/docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <description> 环境配置 # 常用的环境配置工具 # 组内最长用的两种工具为MATLAB和python，对于MATLAB的安装与配置此块略过，重点介绍python的安装以及环境配置。&#xA;在一切开始之前，你需要拥有一个能够非常方便管理你安装的各种软件的工具，即包管理系统，这对管理你的工具之分有益，下面分为windows系统和macos系统分开介绍&#xA;Windows # windwos作为一个成熟的操作系统，虽然集成了很多功能，但是对于一些专业的开发需求有许多好用的工具并未直接包含。有一些小工具能够在一定成都上提升windwos上开发的效率，比如&#xA;PowerToy: 集成了很多小工具的软件，例如类似于mac上的spotlight。由微软开发，对日常使用提高效率有帮助 Terminal: windows上的自带的powershell以及cmd界面不够优雅，让人下头。这款也是由微软开发的终端不仅仅支持自定义字体和背景色，同时对多个shell的管理也十分出色。 WSL（Windows Sub Linux）:如果你希望在windows上体验linux的命令行哲学，WSL是你的不二之选。 这三款软件均可以直接在Windows的应用商店直接找到，安装方式不再赘述。但是有一点需要注意的是WSL的安装除了安装WSL本身之外，还需要安装一个可以运行的Linux发行版，比如Ubuntu。同样也可以在windwos的应用商店直接下载。&#xA;Scoop # 此乃windwos下载软件的傻瓜级神器，是一个命令行工具。作为一个包管理系统他可以直接通过命令行命令安装各种软件，最简单的比如安装python，只需要如下命令即可以完成python的安装以及环境变量的设置&#xA;scoop install python 对于scoop的详细介绍参考Scoop&#xA;MacOS # 作为一款类Unix系统，MacOS的环境配置以及各种软件安装更符合Unix哲学。由于MacOS没有自带的包管理系统，因此你需要安装Homebrew来管理和安装你需要的各种软件与模块，对于Homebrew的安装详见Homebrew。用它安装python的命令是&#xA;brew install python python环境配置 # </description>
+    </item>
+  </channel>
+</rss>

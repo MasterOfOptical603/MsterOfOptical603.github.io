@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Scoop # 为什么使用 Scoop # 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。
+例如安装 python 和 nodejs 只需要执行：
+scoop install python scoop install nodejs 安装 Scoop # Scoop 需要 Windows PowerShell 5.1 或者 PowerShell 作为运行环境，如果你使用的是 Windows 10 及以上版本，Windows PowerShell 是内置在系统中的。而 Windows 7 内置的 Windows PowerShell 版本过于陈旧，你需要手动安装新版本的 PowerShell。
+由于发现很多同学在设置 Windows 用户时使用了中文用户名，导致了用户目录也变成了中文名。如果按照 Scoop 的默认方式将软件安装到用户目录下，可能会造成部分软件执行错误。所以这里推荐安装到自定义目录，如果需要其他安装方式请参考： ScoopInstaller/Install
+# 设置 PowerShell 执行策略 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 下载安装脚本 irm get.scoop.sh -outfile &#39;install.ps1&#39; # 执行安装, --ScoopDir 参数指定 Scoop 安装路径 .">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Scoop # 为什么使用 Scoop # 在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。
+例如安装 python 和 nodejs 只需要执行：
+scoop install python scoop install nodejs 安装 Scoop # Scoop 需要 Windows PowerShell 5.1 或者 PowerShell 作为运行环境，如果你使用的是 Windows 10 及以上版本，Windows PowerShell 是内置在系统中的。而 Windows 7 内置的 Windows PowerShell 版本过于陈旧，你需要手动安装新版本的 PowerShell。
+由于发现很多同学在设置 Windows 用户时使用了中文用户名，导致了用户目录也变成了中文名。如果按照 Scoop 的默认方式将软件安装到用户目录下，可能会造成部分软件执行错误。所以这里推荐安装到自定义目录，如果需要其他安装方式请参考： ScoopInstaller/Install
+# 设置 PowerShell 执行策略 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser # 下载安装脚本 irm get.scoop.sh -outfile &#39;install.ps1&#39; # 执行安装, --ScoopDir 参数指定 Scoop 安装路径 ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/scoop/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Scoop | 603EnrollmentManual</title>
+<link rel="manifest" href="../../../manifest.json">
+<link rel="icon" href="../../../favicon.png" >
+<link rel="stylesheet" href="../../../book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" >
+  <script defer src="../../../flexsearch.min.js"></script>
+  <script defer src="../../../en.search.min.f748a07aabbd28d75e767e750af5121d0fb417b9f7a36793c1e2b6bc225e66a8.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../../../"><span>603EnrollmentManual</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../../docs/%E5%89%8D%E8%A8%80/" class="">前言</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../../docs/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="">环境配置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../../../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Scoop</strong>
+
+  <label for="toc-control">
+    
+    <img src="../../../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么使用-scoop">为什么使用 Scoop</a></li>
+    <li><a href="#安装-scoop">安装 Scoop</a></li>
+    <li><a href="#使用-scoop">使用 Scoop</a></li>
+    <li><a href="#qa">Q&amp;A</a>
+      <ul>
+        <li><a href="#scoop-能配置镜像源吗">Scoop 能配置镜像源吗？</a></li>
+        <li><a href="#为什么找不到-java8">为什么找不到 Java8？</a></li>
+        <li><a href="#我需要安装-python2-该如何操作">我需要安装 python2 该如何操作？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="scoop">
+  Scoop
+  <a class="anchor" href="#scoop">#</a>
+</h1>
+<h2 id="为什么使用-scoop">
+  为什么使用 Scoop
+  <a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bd%bf%e7%94%a8-scoop">#</a>
+</h2>
+<p>在 Windows 下，搭建开发环境一直是一个复杂且困难的问题。由于没有一个统一的标准，导致各种开发环境的安装方式差异巨大，需要付出很多不必要的时间成本。而 Scoop 可以帮助你统一安装并管理常见的开发软件，省去了手动下载安装，配置环境变量等繁琐步骤。</p>
+<p>例如安装 python 和 nodejs 只需要执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>scoop install python
+</span></span><span style="display:flex;"><span>scoop install nodejs
+</span></span></code></pre></div><h2 id="安装-scoop">
+  安装 Scoop
+  <a class="anchor" href="#%e5%ae%89%e8%a3%85-scoop">#</a>
+</h2>
+<p>Scoop 需要 <a href="https://aka.ms/wmf5download">Windows PowerShell 5.1</a> 或者 <a href="https://aka.ms/powershell">PowerShell</a> 作为运行环境，如果你使用的是 Windows 10 及以上版本，Windows PowerShell 是内置在系统中的。而 Windows 7 内置的 Windows PowerShell 版本过于陈旧，你需要手动安装新版本的 PowerShell。</p>
+<blockquote>
+<p>由于发现很多同学在设置 Windows 用户时使用了中文用户名，导致了用户目录也变成了中文名。如果按照 Scoop 的默认方式将软件安装到用户目录下，可能会造成部分软件执行错误。所以这里推荐安装到自定义目录，如果需要其他安装方式请参考： <a href="https://github.com/ScoopInstaller/Install">ScoopInstaller/Install</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 设置 PowerShell 执行策略</span>
+</span></span><span style="display:flex;"><span>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 下载安装脚本</span>
+</span></span><span style="display:flex;"><span>irm get.scoop.sh -outfile <span style="color:#e6db74">&#39;install.ps1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 执行安装, --ScoopDir 参数指定 Scoop 安装路径</span>
+</span></span><span style="display:flex;"><span>.\install.ps1 -ScoopDir <span style="color:#e6db74">&#39;C:\Scoop&#39;</span>
+</span></span></code></pre></div><h2 id="使用-scoop">
+  使用 Scoop
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8-scoop">#</a>
+</h2>
+<p>Scoop 的官方文档对于新手非常友好，相对于在此处赘述更推荐阅读 <a href="https://github.com/ScoopInstaller/Scoop">官方文档</a> 或 <a href="https://github.com/ScoopInstaller/Scoop/wiki/Quick-Start">快速入门</a> 。</p>
+<h2 id="qa">
+  Q&amp;A
+  <a class="anchor" href="#qa">#</a>
+</h2>
+<h3 id="scoop-能配置镜像源吗">
+  Scoop 能配置镜像源吗？
+  <a class="anchor" href="#scoop-%e8%83%bd%e9%85%8d%e7%bd%ae%e9%95%9c%e5%83%8f%e6%ba%90%e5%90%97">#</a>
+</h3>
+<p>Scoop 社区仅维护安装配置，所有的软件都是从该软件官方提供的下载链接进行下载，所以无法提供镜像源。如果因为你的网络环境导致多次下载失败，那么你需要一点点 <a href="%e7%bf%bb%e5%a2%99.md">魔法</a>。</p>
+<h3 id="为什么找不到-java8">
+  为什么找不到 Java8？
+  <a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%89%be%e4%b8%8d%e5%88%b0-java8">#</a>
+</h3>
+<p>原因同上，官方已不再提供 Java8 的下载链接，推荐使用 <a href="https://github.com/ScoopInstaller/Java/blob/master/bucket/ojdkbuild8.json">ojdkbuild8</a> 替代。</p>
+<h3 id="我需要安装-python2-该如何操作">
+  我需要安装 python2 该如何操作？
+  <a class="anchor" href="#%e6%88%91%e9%9c%80%e8%a6%81%e5%ae%89%e8%a3%85-python2-%e8%af%a5%e5%a6%82%e4%bd%95%e6%93%8d%e4%bd%9c">#</a>
+</h3>
+<p>对于已经过时弃用的软件，Scoop 社区会将其从 <a href="https://github.com/ScoopInstaller/Main">ScoopInstaller/Main</a> 中移除并将其添加到 <a href="https://github.com/ScoopInstaller/Versions">ScoopInstaller/Versions</a> 中。如果你需要这些软件的话需要手动添加 bucket：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>scoop bucket add versions
+</span></span><span style="display:flex;"><span>scoop install python27
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么使用-scoop">为什么使用 Scoop</a></li>
+    <li><a href="#安装-scoop">安装 Scoop</a></li>
+    <li><a href="#使用-scoop">使用 Scoop</a></li>
+    <li><a href="#qa">Q&amp;A</a>
+      <ul>
+        <li><a href="#scoop-能配置镜像源吗">Scoop 能配置镜像源吗？</a></li>
+        <li><a href="#为什么找不到-java8">为什么找不到 Java8？</a></li>
+        <li><a href="#我需要安装-python2-该如何操作">我需要安装 python2 该如何操作？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
